@@ -5,9 +5,15 @@ import Header from '../components/Header';
 
 const AppRouter = () => {
   return (
-    <div>
-      <Header />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Switch>
+          <Route component={MathWorksheetsList} path="/" exact={true} />
+          
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 };
 
